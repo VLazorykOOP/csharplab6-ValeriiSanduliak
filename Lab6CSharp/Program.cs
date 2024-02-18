@@ -1,58 +1,47 @@
-﻿// See https://aka.ms/new-console-template for more information
-/// <summary>
-///  Top-level statements 
-///  Код програми (оператори)  вищого рівня
-/// </summary>
-///
-Console.WriteLine("Lab6 C# ");
-AnyFunc();
+﻿using System;
+using Task1;
 
-/// <summary>
-/// 
-///  Top-level statements must precede namespace and type declarations.
-/// At the top-level methods/functions can be defined and used
-/// На верхньому рівні можна визначати та використовувати методи/функції
-/// </summary>
-void AnyFunc()
+namespace Lab6CSharp
 {
-    Console.WriteLine(" Some function in top-level");
-}
-Console.WriteLine("Problems 1 ");
-AnyFunc();
-//  приклад класів
-UserClass cl = new UserClass();
-cl.Name = " UserClass top-level ";
-User.UserClass cl2 = new();
-cl2.Name = " UserClass namespace User ";
-
-
-
-
-/// <summary>
-/// 
-/// Top-level statements must precede namespace and type declarations.
-/// Оператори верхнього рівня мають передувати оголошенням простору імен і типу.
-/// Створення класу(ів) або оголошенням простору імен є закіченням  іструкцій верхнього рівня
-/// 
-/// </summary>
-
-namespace User
-{
-    class UserClass
+    public class Program
     {
-        public string Name { get; set; }
-        public UserClass()
+        static void Main()
         {
-            Name = "NoName";
-        }
-        UserClass(string n)
-        {
-            Name = n;
+            Console.WriteLine("Lab 6 CSharp");
+
+            while (true)
+            {
+                Console.WriteLine("=========================================================");
+                Console.WriteLine("Select a task:");
+                Console.WriteLine("1. Task 1");
+                Console.WriteLine("2. Task 2");
+                Console.WriteLine("3. Task 3");
+                Console.WriteLine("4. Exit");
+                Console.WriteLine("=========================================================");
+                Console.Write("Enter your choice >>> ");
+                string? choice = Console.ReadLine();
+
+                switch (choice)
+                {
+                    case "1":
+                        Task1.Task1.Task1_();
+                        break;
+
+                    case "2":
+                        // Task2.Task2.Task2_();
+                        break;
+                    case "3":
+                        // Task3.Task3.Task3_();
+                        break;
+
+                    case "4":
+                        return;
+
+                    default:
+                        Console.WriteLine("Invalid choice. Please enter a valid option.");
+                        break;
+                }
+            }
         }
     }
-
-}
-class UserClass
-{
-    public string Name { get; set; }
 }
