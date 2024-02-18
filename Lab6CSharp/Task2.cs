@@ -138,8 +138,9 @@ namespace Task2
                     TimeSpan.FromDays(180)
                 )
             };
-
+            Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Software Database:");
+            Console.WriteLine("---------------------------------------------------------");
             foreach (var software in softwareDatabase)
             {
                 software.ShowInfo();
@@ -147,7 +148,9 @@ namespace Task2
             }
 
             DateTime currentDate = DateTime.Now;
+            Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine("Software Available for Current Date:");
+            Console.WriteLine("---------------------------------------------------------");
             Console.WriteLine();
             foreach (var software in softwareDatabase)
             {
