@@ -31,7 +31,7 @@ namespace Lab6CSharp
                         Task2.Task2.Task2_();
                         break;
                     case "3":
-                        // Task3.Task3.Task3_();
+                        Task3.Task3.Task3_();
                         break;
 
                     case "4":
